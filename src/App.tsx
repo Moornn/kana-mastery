@@ -7,8 +7,9 @@ import { KatakanaDecoder } from './components/KatakanaDecoder';
 import { kanaDatabase } from './data/kanaData';
 import { getSettings, pullFromCloud, importData, getAllSRSRecords } from './db/storage';
 import { KanaEntry } from './types';
+import { SuddenDeath } from './components/SuddenDeath';
 
-type ViewState = 'dashboard' | 'hiragana' | 'katakana' | 'quiz' | 'decoder';
+type ViewState = 'dashboard' | 'hiragana' | 'katakana' | 'quiz' | 'decoder' | 'suddenDeath';
 type QuizMode = 'recognition' | 'audio' | 'timeAttack';
 
 export default function App() {
@@ -37,12 +38,18 @@ export default function App() {
     const newKanas = kanaDatabase.filter(k => !studiedIds.includes(k.id));
 
     // 4. Créer la liste (Priorité aux révisions, on bouche les trous avec des nouveaux)
-    // QuizEngine se chargera de couper cette liste à 20 items maximum
+    // QuizEngine et SuddenDeath se chargeront de couper cette liste
     const kanasForThisSession = [...dueKanas, ...newKanas];
 
     setSessionKanas(kanasForThisSession);
     setQuizMode(mode);
-    setView('quiz');
+    
+    // Routage vers la mort subite si le mode est timeAttack
+    if (mode === 'timeAttack') {
+      setView('suddenDeath');
+    } else {
+      setView('quiz');
+    }
   };
 
   // 1. Démarrage et Synchronisation Cloud
@@ -97,6 +104,7 @@ export default function App() {
         {view === 'hiragana' && <KanaGrid type="hiragana" />}
         {view === 'katakana' && <KanaGrid type="katakana" />}
         {view === 'decoder' && <KatakanaDecoder />}
+        
         {view === 'quiz' && (
           <QuizEngine
             kanas={sessionKanas}
@@ -106,10 +114,22 @@ export default function App() {
             settings={settings}
           />
         )}
+        
+        {view === 'suddenDeath' && (
+          <SuddenDeath
+            kanas={sessionKanas}
+            onComplete={(finalScore) => {
+              console.log(`Mort subite terminée. Score: ${finalScore}`);
+              setView('dashboard');
+            }}
+            onClose={() => setView('dashboard')}
+            settings={settings}
+          />
+        )}
       </main>
 
       {/* Navigation Mobile Native Bottom Bar */}
-      {view !== 'quiz' && view !== 'decoder' && (
+      {view !== 'quiz' && view !== 'decoder' && view !== 'suddenDeath' && (
         <nav className="fixed bottom-0 w-full bg-slate-950/85 backdrop-blur-xl border-t border-slate-800 pb-safe z-40">
           <div className="flex justify-around items-center p-2 max-w-md mx-auto">
             <button onClick={() => setView('dashboard')} className={`flex flex-col items-center py-2 px-6 rounded-xl transition-all ${view === 'dashboard' ? 'text-indigo-400 bg-indigo-500/10' : 'text-slate-500 hover:text-slate-300'}`}>
