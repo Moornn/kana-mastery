@@ -1,0 +1,221 @@
+﻿node_modules/vite-plugin-pwa/dist/index.d.ts(4,39): error TS2307: Cannot find module '@vite-pwa/assets-generator/config' or its corresponding type declarations.
+node_modules/vite-plugin-pwa/dist/index.d.ts(5,114): error TS2307: Cannot find module '@vite-pwa/assets-generator/api' or its corresponding type declarations.
+node_modules/vite-plugin-pwa/dist/index.d.ts(22,21): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1,23): error TS2688: Cannot find type definition file for 'node'.
+node_modules/vite/dist/node/index.d.ts(5,41): error TS2307: Cannot find module 'rollup/parseAst' or its corresponding type declarations.
+  There are types at 'C:/dev/kana-mastery/node_modules/rollup/dist/parseAst.d.ts', but this result could not be resolved under your current 'moduleResolution' setting. Consider updating to 'node16', 'nodenext', or 'bundler'.
+node_modules/vite/dist/node/index.d.ts(6,23): error TS2307: Cannot find module 'node:http' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(7,119): error TS2307: Cannot find module 'node:http' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(8,35): error TS2307: Cannot find module 'node:http2' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(9,21): error TS2307: Cannot find module 'node:fs' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(10,25): error TS2307: Cannot find module 'node:events' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(11,30): error TS2307: Cannot find module 'node:events' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(12,76): error TS2307: Cannot find module 'node:https' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(13,22): error TS2307: Cannot find module 'node:net' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(14,22): error TS2307: Cannot find module 'node:url' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(15,21): error TS2307: Cannot find module 'node:url' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(16,25): error TS2307: Cannot find module 'node:stream' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(17,39): error TS2307: Cannot find module 'node:stream' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(20,38): error TS2307: Cannot find module 'node:tls' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(21,29): error TS2307: Cannot find module 'node:zlib' or its corresponding type declarations.
+node_modules/vite/dist/node/index.d.ts(309,35): error TS2503: Cannot find namespace 'NodeJS'.
+node_modules/vite/dist/node/index.d.ts(391,11): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1014,40): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1084,55): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1102,39): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1119,55): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1137,39): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1154,55): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1172,39): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1189,38): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1201,56): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1210,38): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1222,59): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1237,18): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1237,41): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1242,24): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1242,47): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1247,39): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1247,48): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1278,25): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1309,24): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1309,33): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(1389,20): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(2401,63): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/vite/dist/node/index.d.ts(3561,84): error TS2580: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+node_modules/workbox-core/types.d.ts(14,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(37,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(46,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(89,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(99,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(109,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(119,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(129,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(140,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(149,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(157,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(166,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(174,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(183,12): error TS2304: Cannot find name 'ExtendableEvent'.
+node_modules/workbox-core/types.d.ts(193,12): error TS2304: Cannot find name 'ExtendableEvent'.
+src/App.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/App.tsx(3,27): error TS6142: Module './components/Dashboard' was resolved to 'C:/dev/kana-mastery/src/components/Dashboard.tsx', but '--jsx' is not set.
+src/App.tsx(4,26): error TS6142: Module './components/KanaGrid' was resolved to 'C:/dev/kana-mastery/src/components/KanaGrid.tsx', but '--jsx' is not set.
+src/App.tsx(5,28): error TS6142: Module './components/QuizEngine' was resolved to 'C:/dev/kana-mastery/src/components/QuizEngine.tsx', but '--jsx' is not set.
+src/App.tsx(6,33): error TS6142: Module './components/KatakanaDecoder' was resolved to 'C:/dev/kana-mastery/src/components/KatakanaDecoder.tsx', but '--jsx' is not set.
+src/App.tsx(23,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(25,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(27,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(32,33): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(33,33): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(34,32): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(36,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(47,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(48,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(49,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(50,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(51,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(53,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(54,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(55,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(57,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(58,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/App.tsx(59,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/components/Dashboard.tsx(38,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(39,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(40,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(41,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(42,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(44,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(44,149): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(47,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(48,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(49,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(50,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(52,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(53,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(54,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(54,78): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(58,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(59,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(60,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(62,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(63,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(65,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(66,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(71,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(72,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(73,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(74,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(75,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(75,119): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(78,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(79,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(80,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(81,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(83,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(84,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(85,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(87,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(88,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(89,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(90,19): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(91,19): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(92,19): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(93,19): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(98,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(99,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(100,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(102,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(103,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/Dashboard.tsx(104,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/components/KanaGrid.tsx(4,27): error TS6142: Module './KanaModal' was resolved to 'C:/dev/kana-mastery/src/components/KanaModal.tsx', but '--jsx' is not set.
+src/components/KanaGrid.tsx(12,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(14,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(15,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(16,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(18,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(23,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(24,17): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaGrid.tsx(30,24): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/components/KanaModal.tsx(5,38): error TS6142: Module './StrokeAnimatorCanvas' was resolved to 'C:/dev/kana-mastery/src/components/StrokeAnimatorCanvas.tsx', but '--jsx' is not set.
+src/components/KanaModal.tsx(14,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(15,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(16,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(17,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(18,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(18,129): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(21,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(22,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(23,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(24,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(25,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(27,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(30,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(34,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(37,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(38,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(39,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(40,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(43,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(44,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(45,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(47,19): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(48,21): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(49,23): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(50,23): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KanaModal.tsx(52,21): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/components/KatakanaDecoder.tsx(15,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(16,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(17,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(21,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(24,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(25,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(26,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(27,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/KatakanaDecoder.tsx(35,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/components/QuizEngine.tsx(81,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(82,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(83,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(83,68): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(84,35): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(85,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(88,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(90,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(94,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(95,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(98,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(103,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/QuizEngine.tsx(116,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/components/SettingsModal.tsx(3,10): error TS2305: Module '"../db/storage"' has no exported member 'exportProgressToJson'.
+src/components/SettingsModal.tsx(3,32): error TS2305: Module '"../db/storage"' has no exported member 'importProgressFromJson'.
+src/components/SettingsModal.tsx(37,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(38,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(39,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(40,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(41,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(41,72): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(43,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(44,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(45,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(46,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(47,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(51,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(52,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(53,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(55,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(56,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(57,15): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/SettingsModal.tsx(59,21): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/StrokeAnimatorCanvas.tsx(1,8): error TS1259: Module '"C:/dev/kana-mastery/node_modules/@types/react/index"' can only be default-imported using the 'esModuleInterop' flag
+src/components/StrokeAnimatorCanvas.tsx(23,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/StrokeAnimatorCanvas.tsx(27,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/StrokeAnimatorCanvas.tsx(29,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/StrokeAnimatorCanvas.tsx(45,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/StrokeAnimatorCanvas.tsx(50,24): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.

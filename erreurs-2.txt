@@ -1,0 +1,5 @@
+﻿src/App.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/KanaGrid.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/KanaModal.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/KatakanaDecoder.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/StrokeAnimatorCanvas.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
