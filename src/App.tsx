@@ -5,7 +5,8 @@ import { KanaGrid } from './components/KanaGrid';
 import { QuizEngine } from './components/QuizEngine';
 import { KatakanaDecoder } from './components/KatakanaDecoder';
 import { kanaDatabase } from './data/kanaData';
-import { getSettings, pullFromCloud, importData } from './db/storage';
+import { getSettings, pullFromCloud, importData, getAllSRSRecords } from './db/storage';
+import { KanaEntry } from './types'; 
 
 type ViewState = 'dashboard' | 'hiragana' | 'katakana' | 'quiz' | 'decoder';
 type QuizMode = 'recognition' | 'audio' | 'timeAttack';
@@ -17,6 +18,32 @@ export default function App() {
   
   // État pour bloquer l'affichage tant que la synchro cloud n'est pas terminée
   const [isSyncing, setIsSyncing] = useState(true);
+  const [sessionKanas, setSessionKanas] = useState<KanaEntry[]>([]);
+
+  const handleStartQuiz = async (mode: QuizMode) => {
+    // 1. Lire la mémoire locale
+    const records = await getAllSRSRecords();
+    const now = new Date().getTime();
+    
+    // 2. Identifier les Kanas dus pour une révision
+    const studiedIds = records.map(r => r.kanaId);
+    const dueIds = records
+      .filter(r => new Date(r.nextReview).getTime() <= now)
+      .map(r => r.kanaId);
+      
+    const dueKanas = kanaDatabase.filter(k => dueIds.includes(k.id));
+    
+    // 3. Identifier les Kanas jamais étudiés
+    const newKanas = kanaDatabase.filter(k => !studiedIds.includes(k.id));
+    
+    // 4. Créer la liste (Priorité aux révisions, on bouche les trous avec des nouveaux)
+    // QuizEngine se chargera de couper cette liste à 20 items maximum
+    const kanasForThisSession = [...dueKanas, ...newKanas];
+    
+    setSessionKanas(kanasForThisSession);
+    setQuizMode(mode);
+    setView('quiz');
+  };
 
   // 1. Démarrage et Synchronisation Cloud
   useEffect(() => {
@@ -63,7 +90,7 @@ export default function App() {
       <main className="flex-1 overflow-y-auto pb-24 scroll-smooth">
         {view === 'dashboard' && (
           <Dashboard 
-            onStartQuiz={(mode) => { setQuizMode(mode as QuizMode); setView('quiz'); }} 
+            onStartQuiz={handleStartQuiz} 
             onOpenDecoder={() => setView('decoder')}
           />
         )}
@@ -72,10 +99,10 @@ export default function App() {
         {view === 'decoder' && <KatakanaDecoder />}
         {view === 'quiz' && (
           <QuizEngine 
-            kanas={kanaDatabase}
+            kanas={sessionKanas}
             mode={quizMode} 
             onComplete={() => setView('dashboard')}
-            onClose={() => setView('dashboard')} // <-- BOUTON RETOUR BRANCHÉ ICI
+            onClose={() => setView('dashboard')} 
             settings={settings}
           />
         )}
