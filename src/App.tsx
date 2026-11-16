@@ -6,7 +6,7 @@ import { QuizEngine } from './components/QuizEngine';
 import { KatakanaDecoder } from './components/KatakanaDecoder';
 import { kanaDatabase } from './data/kanaData';
 import { getSettings, pullFromCloud, importData, getAllSRSRecords } from './db/storage';
-import { KanaEntry } from './types'; 
+import { KanaEntry } from './types';
 
 type ViewState = 'dashboard' | 'hiragana' | 'katakana' | 'quiz' | 'decoder';
 type QuizMode = 'recognition' | 'audio' | 'timeAttack';
@@ -15,7 +15,7 @@ export default function App() {
   const [view, setView] = useState<ViewState>('dashboard');
   const [quizMode, setQuizMode] = useState<QuizMode>('recognition');
   const [settings, setSettings] = useState({ hapticEnabled: true, soundEnabled: true, defaultFont: 'Noto Sans JP' });
-  
+
   // État pour bloquer l'affichage tant que la synchro cloud n'est pas terminée
   const [isSyncing, setIsSyncing] = useState(true);
   const [sessionKanas, setSessionKanas] = useState<KanaEntry[]>([]);
@@ -24,22 +24,22 @@ export default function App() {
     // 1. Lire la mémoire locale
     const records = await getAllSRSRecords();
     const now = new Date().getTime();
-    
+
     // 2. Identifier les Kanas dus pour une révision
     const studiedIds = records.map(r => r.kanaId);
     const dueIds = records
-      .filter(r => new Date(r.nextReview).getTime() <= now)
+      .filter(r => new Date(r.nextReviewDate).getTime() <= now)
       .map(r => r.kanaId);
-      
+
     const dueKanas = kanaDatabase.filter(k => dueIds.includes(k.id));
-    
+
     // 3. Identifier les Kanas jamais étudiés
     const newKanas = kanaDatabase.filter(k => !studiedIds.includes(k.id));
-    
+
     // 4. Créer la liste (Priorité aux révisions, on bouche les trous avec des nouveaux)
     // QuizEngine se chargera de couper cette liste à 20 items maximum
     const kanasForThisSession = [...dueKanas, ...newKanas];
-    
+
     setSessionKanas(kanasForThisSession);
     setQuizMode(mode);
     setView('quiz');
@@ -50,18 +50,18 @@ export default function App() {
     const syncAtStartup = async () => {
       setIsSyncing(true);
       const cloudData = await pullFromCloud();
-      
+
       // Si on a récupéré des données valides du cloud, on écrase la base locale
       if (cloudData && cloudData.srs && cloudData.settings) {
         await importData(JSON.stringify(cloudData));
       }
-      
+
       // On charge les paramètres finaux (cloud ou locaux)
       const currentSettings = await getSettings();
       setSettings(currentSettings);
       setIsSyncing(false);
     };
-    
+
     syncAtStartup();
   }, []); // Ce bloc ne roule qu'une seule fois au chargement de l'app
 
@@ -86,11 +86,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-50 flex flex-col font-sans selection:bg-indigo-500/30">
-      
+
       <main className="flex-1 overflow-y-auto pb-24 scroll-smooth">
         {view === 'dashboard' && (
-          <Dashboard 
-            onStartQuiz={handleStartQuiz} 
+          <Dashboard
+            onStartQuiz={(mode) => handleStartQuiz(mode as QuizMode)}
             onOpenDecoder={() => setView('decoder')}
           />
         )}
@@ -98,11 +98,11 @@ export default function App() {
         {view === 'katakana' && <KanaGrid type="katakana" />}
         {view === 'decoder' && <KatakanaDecoder />}
         {view === 'quiz' && (
-          <QuizEngine 
+          <QuizEngine
             kanas={sessionKanas}
-            mode={quizMode} 
+            mode={quizMode}
             onComplete={() => setView('dashboard')}
-            onClose={() => setView('dashboard')} 
+            onClose={() => setView('dashboard')}
             settings={settings}
           />
         )}
