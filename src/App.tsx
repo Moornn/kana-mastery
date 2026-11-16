@@ -5,7 +5,7 @@ import { KanaGrid } from './components/KanaGrid';
 import { QuizEngine } from './components/QuizEngine';
 import { KatakanaDecoder } from './components/KatakanaDecoder';
 import { kanaDatabase } from './data/kanaData';
-import { getSettings } from './db/storage';
+import { getSettings, pullFromCloud, importData } from './db/storage';
 
 type ViewState = 'dashboard' | 'hiragana' | 'katakana' | 'quiz' | 'decoder';
 type QuizMode = 'recognition' | 'audio' | 'timeAttack';
@@ -14,10 +14,48 @@ export default function App() {
   const [view, setView] = useState<ViewState>('dashboard');
   const [quizMode, setQuizMode] = useState<QuizMode>('recognition');
   const [settings, setSettings] = useState({ hapticEnabled: true, soundEnabled: true, defaultFont: 'Noto Sans JP' });
+  
+  // État pour bloquer l'affichage tant que la synchro cloud n'est pas terminée
+  const [isSyncing, setIsSyncing] = useState(true);
 
+  // 1. Démarrage et Synchronisation Cloud
   useEffect(() => {
-    getSettings().then(setSettings);
-  }, [view]); // Recharge les settings quand on change de vue
+    const syncAtStartup = async () => {
+      setIsSyncing(true);
+      const cloudData = await pullFromCloud();
+      
+      // Si on a récupéré des données valides du cloud, on écrase la base locale
+      if (cloudData && cloudData.srs && cloudData.settings) {
+        await importData(JSON.stringify(cloudData));
+      }
+      
+      // On charge les paramètres finaux (cloud ou locaux)
+      const currentSettings = await getSettings();
+      setSettings(currentSettings);
+      setIsSyncing(false);
+    };
+    
+    syncAtStartup();
+  }, []); // Ce bloc ne roule qu'une seule fois au chargement de l'app
+
+  // 2. Recharger les paramètres quand on change de vue (si on n'est pas en pleine synchro)
+  useEffect(() => {
+    if (!isSyncing) {
+      getSettings().then(setSettings);
+    }
+  }, [view, isSyncing]);
+
+  // Écran de chargement pendant la synchronisation initiale
+  if (isSyncing) {
+    return (
+      <div className="min-h-screen bg-slate-900 flex items-center justify-center font-sans">
+        <div className="flex flex-col items-center animate-pulse">
+          <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+          <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Synchronisation Cloud...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-50 flex flex-col font-sans selection:bg-indigo-500/30">
@@ -34,9 +72,10 @@ export default function App() {
         {view === 'decoder' && <KatakanaDecoder />}
         {view === 'quiz' && (
           <QuizEngine 
-            kanas={kanaDatabase} // Le tri par date SRS s'effectue idéalement ici avant de passer la prop
+            kanas={kanaDatabase}
             mode={quizMode} 
             onComplete={() => setView('dashboard')}
+            onClose={() => setView('dashboard')} // <-- BOUTON RETOUR BRANCHÉ ICI
             settings={settings}
           />
         )}

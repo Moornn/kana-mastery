@@ -34,6 +34,13 @@ export const getDB = async () => {
   });
 };
 
+// Nouvelle fonction utilitaire pour assembler toutes les données
+const getLocalSnapshot = async () => {
+  const srs = await getAllSRSRecords();
+  const settings = await getSettings();
+  return { srs, settings, lastSync: new Date().toISOString() };
+};
+
 // --- GESTION SRS ---
 export const getSRSRecord = async (kanaId: string): Promise<SRSRecord | undefined> => {
   const db = await getDB();
@@ -43,6 +50,10 @@ export const getSRSRecord = async (kanaId: string): Promise<SRSRecord | undefine
 export const saveSRSRecord = async (record: SRSRecord): Promise<void> => {
   const db = await getDB();
   await db.put('srs', record);
+  
+  // Nouvelle étape : Pousser la base de données entière vers le cloud
+  const snapshot = await getLocalSnapshot();
+  pushToCloud(snapshot);
 };
 
 export const getAllSRSRecords = async (): Promise<SRSRecord[]> => {
@@ -60,6 +71,10 @@ export const getSettings = async (): Promise<AppSettings> => {
 export const saveSettings = async (settings: AppSettings): Promise<void> => {
   const db = await getDB();
   await db.put('settings', settings, 'user_prefs');
+  
+  // Nouvelle étape : Pousser la base de données entière vers le cloud
+  const snapshot = await getLocalSnapshot();
+  pushToCloud(snapshot);
 };
 
 // --- EXPORT / IMPORT JSON ---
@@ -91,4 +106,39 @@ export const importData = async (jsonData: string): Promise<boolean> => {
     console.error('Erreur lors de l\'importation :', error);
     return false;
   }
+};
+// Pousser la base de données locale vers le cloud
+export const pushToCloud = async (localData: any) => {
+  try {
+    const response = await fetch('/api/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(localData)
+    });
+    if (response.ok) {
+      console.log("✅ Synchro Cloudflare réussie !");
+    } else {
+        console.error("⚠️ Échec de la synchro :", response.statusText);
+    }
+  } catch (error) {
+    console.error("❌ Erreur de réseau vers le cloud :", error);
+  }
+};
+
+// Récupérer la base de données du cloud
+export const pullFromCloud = async () => {
+  try {
+    const response = await fetch('/api/sync');
+    if (response.ok) {
+      const cloudData = await response.json();
+      // Vérification que les données ne sont pas vides
+      if (Object.keys(cloudData).length > 0) {
+          console.log("☁️ Données Cloudflare récupérées avec succès");
+          return cloudData;
+      }
+    }
+  } catch (error) {
+    console.error("❌ Erreur de récupération cloud :", error);
+  }
+  return null;
 };
